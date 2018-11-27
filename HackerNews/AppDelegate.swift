@@ -58,11 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
         if let error = error {
             print("\(error.localizedDescription)")
             // [START_EXCLUDE silent]
-            NotificationCenter.default.post(
-                name: Notification.Name(rawValue: "ToggleAuthUINotification"), object: nil, userInfo: nil)
+
             // [END_EXCLUDE]
         } else {
             // Perform any operations on signed in user here.
+            NotificationCenter.default.post(
+                name: NSNotification.Name("SuccessfulSignInNotification"), object: nil, userInfo: nil)
             let userId = user.userID                  // For client-side use only!
             let idToken = user.authentication.idToken // Safe to send to the server
             let fullName = user.profile.name
@@ -76,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
         }
     }
     // [END signin_handler]
+
     // [START disconnect_handler]
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
@@ -89,4 +91,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
     }
     // [END disconnect_handler]
 }
+
 

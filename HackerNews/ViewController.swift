@@ -17,9 +17,19 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         GIDSignIn.sharedInstance().uiDelegate = self
+  NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: NSNotification.Name("SuccessfulSignInNotification"), object: nil)
+    }
+
+    @objc func didSignIn()  {
+
+        // Add your code here to push the new view controller
+       performSegue(withIdentifier: "segueToNewsVC", sender: self)
 
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
 }
 

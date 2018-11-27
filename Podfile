@@ -7,4 +7,5 @@ target 'HackerNews' do
 
   # Pods for HackerNews
 pod 'GoogleSignIn'
+pod 'Alamofire'
 end
