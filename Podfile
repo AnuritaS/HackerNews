@@ -8,4 +8,5 @@ target 'HackerNews' do
   # Pods for HackerNews
 pod 'GoogleSignIn'
 pod 'Alamofire'
+pod 'ObjectMapper'
 end

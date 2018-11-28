@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		945B658794503EBCF3B4762B /* Pods_HackerNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100FF0765D344E207073FF3C /* Pods_HackerNews.framework */; };
+		DF2009DC21AEE5490030D91B /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2009DB21AEE5490030D91B /* APICall.swift */; };
+		DF2009DF21AEE6000030D91B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2009DE21AEE6000030D91B /* Constant.swift */; };
+		DF2009E221AEE6F40030D91B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2009E121AEE6F40030D91B /* Protocols.swift */; };
 		DF749DA921AD77DA00B10FDE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF749DA821AD77DA00B10FDE /* NewsViewController.swift */; };
 		DFC91EDD21AC2A230040BCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC91EDC21AC2A230040BCDD /* AppDelegate.swift */; };
 		DFC91EDF21AC2A230040BCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC91EDE21AC2A230040BCDD /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		100FF0765D344E207073FF3C /* Pods_HackerNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE831C47868E56B9582E8134 /* Pods-HackerNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews.release.xcconfig"; sourceTree = "<group>"; };
+		DF2009DB21AEE5490030D91B /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		DF2009DE21AEE6000030D91B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DF2009E121AEE6F40030D91B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		DF749DA821AD77DA00B10FDE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		DFC91ED921AC2A230040BCDD /* HackerNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC91EDC21AC2A230040BCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF2009D921AEE4FD0030D91B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DF2009DB21AEE5490030D91B /* APICall.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DF2009DA21AEE5230030D91B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DF749DA821AD77DA00B10FDE /* NewsViewController.swift */,
+				DFC91EDE21AC2A230040BCDD /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DF2009DD21AEE5E50030D91B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DFC91EDC21AC2A230040BCDD /* AppDelegate.swift */,
+				DF2009DE21AEE6000030D91B /* Constant.swift */,
+				DF2009E121AEE6F40030D91B /* Protocols.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		DFC91ED021AC2A230040BCDD = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +106,14 @@
 		DFC91EDB21AC2A230040BCDD /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
-				DFC91EDC21AC2A230040BCDD /* AppDelegate.swift */,
-				DFC91EDE21AC2A230040BCDD /* ViewController.swift */,
-				DFC91EE021AC2A230040BCDD /* Main.storyboard */,
 				DFC91EE321AC2A260040BCDD /* Assets.xcassets */,
-				DFC91EE521AC2A260040BCDD /* LaunchScreen.storyboard */,
 				DFEC03E521AC39790035A5BE /* GoogleService-Info.plist */,
 				DFC91EE821AC2A260040BCDD /* Info.plist */,
-				DF749DA821AD77DA00B10FDE /* NewsViewController.swift */,
+				DF2009D921AEE4FD0030D91B /* Interactor */,
+				DFC91EE521AC2A260040BCDD /* LaunchScreen.storyboard */,
+				DFC91EE021AC2A230040BCDD /* Main.storyboard */,
+				DF2009DD21AEE5E50030D91B /* Utility */,
+				DF2009DA21AEE5230030D91B /* ViewController */,
 			);
 			path = HackerNews;
 			sourceTree = "<group>";
@@ -212,6 +245,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -219,6 +253,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -234,6 +269,9 @@
 			files = (
 				DF749DA921AD77DA00B10FDE /* NewsViewController.swift in Sources */,
 				DFC91EDF21AC2A230040BCDD /* ViewController.swift in Sources */,
+				DF2009DF21AEE6000030D91B /* Constant.swift in Sources */,
+				DF2009E221AEE6F40030D91B /* Protocols.swift in Sources */,
+				DF2009DC21AEE5490030D91B /* APICall.swift in Sources */,
 				DFC91EDD21AC2A230040BCDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

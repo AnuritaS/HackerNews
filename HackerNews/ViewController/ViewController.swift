@@ -21,7 +21,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     }
 
     @objc func didSignIn()  {
-
         // Add your code here to push the new view controller
        performSegue(withIdentifier: "segueToNewsVC", sender: self)
 
